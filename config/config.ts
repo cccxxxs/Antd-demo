@@ -2,6 +2,7 @@
 import { defineConfig } from 'umi';
 import defaultSettings from './defaultSettings';
 import proxy from './proxy';
+
 const { REACT_APP_ENV } = process.env;
 export default defineConfig({
   hash: true,
@@ -62,6 +63,12 @@ export default defineConfig({
             {
               path: '/',
               redirect: '/dashboard/analysis',
+            },
+            {
+              path: '/new_page',
+              name: 'new_page',
+              icon: 'smile',
+              component: './new_page',
             },
             {
               path: '/dashboard',
